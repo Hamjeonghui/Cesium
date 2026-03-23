@@ -13,7 +13,7 @@ import java.net.URL;
 @RequestMapping("/osm_tiles2")
 @CrossOrigin(origins = {
         "http://localhost:8089",
-        "http://<ip>:8089"
+        "http://<로컬ip>:8089"
 })
 public class TileController {
 
@@ -23,7 +23,7 @@ public class TileController {
             @PathVariable String x,
             @PathVariable String y
     ) {
-        String gisUrl = "http://<geoserver>/osm_tiles2/" + z + "/" + x + "/" + y + ".png";
+        String gisUrl = "http://flight.amo.go.kr/osm_tiles2/" + z + "/" + x + "/" + y + ".png";
 
         try {
             URL url = new URL(gisUrl);
